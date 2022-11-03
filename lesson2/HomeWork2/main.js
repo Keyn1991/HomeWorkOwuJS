@@ -41,8 +41,8 @@ let bookTS = {
     title: 'React, TypeScript, Node',
     pageCount: 544,
     genre: 'Programming',
-    authors:
-    {name: ['David Choi'], age: [38]}
+    authors:[{name: 'David Choi'}, {age: 38}],
+
 
 
 }
@@ -51,19 +51,21 @@ let bookJS = {
     title: 'JavaScript',
     pageCount:  647,
     genre: 'Programming',
-    authors:
-    {name: ['Jon Duckett'], age: [33]}
+    authors:[{name: 'Jon Duckett'}, {age: 33}],
+
 }
 
 let bookPython = {
     title: 'Python kurs dla nauczycieli i studentow',
     pageCount: 416,
     genre: 'Programming',
-    authors:
-    {name: ['David Choi'], age: [39]}
+    authors:[{name: 'Gniewomir Sarbicki'}, {age: 31}],
+
 
 }
-
+console.log(bookPython);
+console.log(bookJS);
+console.log(bookTS)
 
 
 
