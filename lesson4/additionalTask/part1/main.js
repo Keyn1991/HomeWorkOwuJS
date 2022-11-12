@@ -35,7 +35,7 @@
 
 // 1. перебрати його циклом while
 
-let arr=[2,17,13,6,22,31,45,66,100,-18];
+// let arr=[2,17,13,6,22,31,45,66,100,-18];
 // let i = 0;
 // while (i < arr.length) {
 //
@@ -79,8 +79,11 @@ let arr=[2,17,13,6,22,31,45,66,100,-18];
 // }
 
 // 6. перебрати циклом for та вивести  числа тільки парні  значення
-
-
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i]);
+//     }
+// }
 // 7. замінити кожне число кратне 3 на слово "okten"
 
 // 8. вивести масив в зворотньому порядку.
@@ -111,10 +114,58 @@ let arr=[2,17,13,6,22,31,45,66,100,-18];
 // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 //
 //
-//
+
+
+let books = [
+    {
+        title: 'bookname1',
+        pageCount: 250,
+        genres: ['art'],
+        authors: ['author1']
+    },
+    {
+        title: 'bookname2',
+        pageCount: 300,
+        genres: ['scientific', ],
+        authors: ['author2', 'author3']
+    },
+    {
+        title: 'bookname3',
+        pageCount: 350,
+        genres: ['fiction', ],
+        authors: ['author4']
+    },
+    {
+        title: 'bookname4',
+        pageCount: 400,
+        genres: ['technical'],
+        authors: ['author5', 'author6']
+    },
+    {
+        title: 'bookname5',
+        pageCount: 450,
+        genres: ['scientific', 'technical'],
+        authors: ['author7', 'author8', 'author9']
+    },
+]
+
+
+let count = books[0];
+
+
+for (const book of books) {
+    if (book.pageCount > count.pageCount) {
+        count = books;
+    }
+
+}
+console.log(count);
 // стоврити масив книжок (назва, кількість сторінок, автори , жанри).
 // -знайти наібльшу книжку.
 // - знайти книжку/ки з найбільшою кількістю жанрів
 // - знайти книжку/ки з найдовшою назвою
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
+
+
+
