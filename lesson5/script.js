@@ -1,48 +1,46 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
 
-// function areaRec() {
-//     let a = +prompt('strona a');
-//     let b = +prompt('strona b');
-//     let s = a * b;
+// function areaRec(stronaA, stronaB) {
+//
+//     let s = stronaA * stronaB;
 //
 // document.write(s);
+// return 0;
 //
 // }
-// areaRec()
-//
+// areaRec(10, 15)
 
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
 
-// function areaRec() {
-//     let r = +prompt('вкажіть радіус кругу');
+// function areaRec(r) {
+//
 //     let s = 3.14 * r * r;
 //
 //
 //     document.write(s);
-//
+//     return 0;
 // }
-// areaRec()
-//
+// areaRec(15)
+
 
 
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 //
-// function areaRec() {
-//     let r = +prompt('вкажіть радіус циліндру');
-//     let h = +prompt('вкажіть висоту циліндру');
+// function areaRec(r, h) {
+//
 //
 //
 //     let s =  Math.PI * r * (r + h);
 //
 //
-//         document.write(s);
-//
+//     document.write(s);
+//     return 0;
 // }
-// areaRec()
+// areaRec(20, 30)
 //
-//
+// //
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 // function arrayPrinter(arr) {
@@ -115,33 +113,33 @@
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-// let users = [
-//         {id: 14715, name: 'vasya', age: 31},
-//         {id: 21414, name: 'petya', age: 30},
-//         {id: 34124, name: 'kolya', age: 29},
-//         {id: 45151, name: 'olya', age: 28}
-//     ];
-// function arrayObjectsUsers(array) {
-//
-//     document.write(`<div>`)
-//
-//     for (let i = 0; i < users.length; i++) {
-//         let user = users[i];
-//         document.write
-//         (`<div><ul>
-// 				<li>id:${user.id}</li>
-// 				<li>name: ${user.name}</li>
-// 				<li>age: ${user.age}</li>
-// 			</ul></div>`);
-//
-//     }
-//
-//     document.write(`</div>`)
-// }
-//
-//
-// arrayObjectsUsers(users)
-//
+let users = [
+        {id: 14715, name: 'vasya', age: 31},
+        {id: 21414, name: 'petya', age: 30},
+        {id: 34124, name: 'kolya', age: 29},
+        {id: 45151, name: 'olya', age: 28}
+    ];
+function arrayObjectsUsers(array) {
+
+
+
+    for (let i = 0; i < users.length; i++) {
+        let user = users[i];
+        document.write
+        (`<div><ul>
+             <li>id:${user.id}</li>
+				<li>name: ${user.name}</li>
+				<li>age: ${user.age}</li>
+			</ul></div>`);
+
+    }
+    document.write(`</div>`)
+
+}
+
+
+arrayObjectsUsers(users)
+
 
 
 // - створити функцію яка повертає найменьше число з масиву
@@ -165,15 +163,15 @@
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
-arrayNum = [1, 5, 11, 14, -6, 7, -4, 15];
-
-function arrSum(array) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i];
-
-    }
-    console.log(sum);
-
-}
-arrSum(arrayNum)
+// arrayNum = [1, 5, 11, 14, -6, 7, -4, 15];
+//
+// function arrSum(array) {
+//     let sum = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         sum += array[i];
+//
+//     }
+//     console.log(sum);
+//
+// }
+// arrSum(arrayNum)
