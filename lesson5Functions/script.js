@@ -113,32 +113,32 @@
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 
-let users = [
-        {id: 14715, name: 'vasya', age: 31},
-        {id: 21414, name: 'petya', age: 30},
-        {id: 34124, name: 'kolya', age: 29},
-        {id: 45151, name: 'olya', age: 28}
-    ];
-function arrayObjectsUsers(array) {
-
-
-
-    for (let i = 0; i < users.length; i++) {
-        let user = users[i];
-        document.write
-        (`<div><ul>
-             <li>id:${user.id}</li>
-				<li>name: ${user.name}</li>
-				<li>age: ${user.age}</li>
-			</ul></div>`);
-
-    }
-    document.write(`</div>`)
-
-}
-
-
-arrayObjectsUsers(users)
+// let users = [
+//         {id: 14715, name: 'vasya', age: 31},
+//         {id: 21414, name: 'petya', age: 30},
+//         {id: 34124, name: 'kolya', age: 29},
+//         {id: 45151, name: 'olya', age: 28}
+//     ];
+// function arrayObjectsUsers(array) {
+//
+//
+//
+//     for (let i = 0; i < users.length; i++) {
+//         let user = users[i];
+//         document.write
+//         (`<div><ul>
+//              <li>id:${user.id}</li>
+// 				<li>name: ${user.name}</li>
+// 				<li>age: ${user.age}</li>
+// 			</ul></div>`);
+//
+//     }
+//     document.write(`</div>`)
+//
+// }
+//
+//
+// arrayObjectsUsers(users)
 
 
 
@@ -163,15 +163,15 @@ arrayObjectsUsers(users)
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
-// arrayNum = [1, 5, 11, 14, -6, 7, -4, 15];
-//
-// function arrSum(array) {
-//     let sum = 0;
-//     for (let i = 0; i < array.length; i++) {
-//         sum += array[i];
-//
-//     }
-//     console.log(sum);
-//
-// }
-// arrSum(arrayNum)
+arrayNum = [1, 5, 11, 14, -6, 7, -4, 15];
+
+function arrSum(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+
+    }
+    console.log(sum);
+
+}
+arrSum(arrayNum)
