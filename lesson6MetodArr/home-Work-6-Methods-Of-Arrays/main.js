@@ -21,20 +21,23 @@
 // console.log(textLorem.toLowerCase());
 //
 // - Є "брудна" стрінга let str = ' dirty string   ' . Почистити її від зайвих пробілів.
-//
+
 // let str = '  dirty string   ';
 // console.log(str);
 // console.log(str.replaceAll(' ', ''));
-
-
-
+//
+// let str = '  dirty string   ';
+// console.log(str);
+// console.log(str.trim());
+//
+//
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
 //     let str = 'Ревуть воли як ясла повні';
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 //
 // let str = 'Ревуть воли як ясла повні';
 //
-// let arr = str.split([0])
+// let arr = str.split(' ')
 // console.log(arr);
 // console.log(typeof arr);
 
@@ -50,7 +53,21 @@
 //     let nums = [11,21,3];
 // sortNums(nums,'ascending') // [3,11,21]
 // sortNums(nums,'descending') // [21,11,3]
-// //
+
+let num = [11,21,3];
+const sortNums = (direction,arr) => {
+    if (direction === 'ascending') {
+        arr.sort((a,b) => a - b);
+
+    }else if (direction === 'descending') {
+        arr.sort((a,b) => a - b);
+    }
+
+}
+
+
+
+
 // console.log(nums.sort((a, b) => {
 //     if (a > b) {
 //         return 1;
@@ -191,16 +208,16 @@ let arrCards = [
 //     clubs:[]
 // }
 
-let reduce = arrCards.reduce((accumulator, card) => {
-    if (card.card === 'spades') {
-        accumulator.spades.push(card);
-    }else if (card.card === 'tambourines') {
-        accumulator.diamonds.push(card);
-    } else if (card.card === 'hearts') {
-        accumulator.hearts.push(card)
-    } else if (card.card === 'clubs') {
-        accumulator.clubs.push(card)
-    }
-    return accumulator;
-}, {spades:[], diamonds:[], hearts:[], clubs:[]});
-console.log(reduce)
+// let reduce = arrCards.reduce((accumulator, card) => {
+//     if (card.card === 'spades') {
+//         accumulator.spades.push(card);
+//     }else if (card.card === 'tambourines') {
+//         accumulator.diamonds.push(card);
+//     } else if (card.card === 'hearts') {
+//         accumulator.hearts.push(card)
+//     } else if (card.card === 'clubs') {
+//         accumulator.clubs.push(card)
+//     }
+//     return accumulator;
+// }, {spades:[], diamonds:[], hearts:[], clubs:[]});
+// console.log(reduce)
