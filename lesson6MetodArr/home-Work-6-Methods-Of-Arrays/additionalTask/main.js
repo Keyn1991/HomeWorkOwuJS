@@ -53,7 +53,15 @@
 //
 // upCase(string)
 
+// let str = 'hello';
+// const toUP = (str) =>
+//     str[0].toUpperCase() + str.slice(1)
+//
+//
+// console.log(toUP(str));
+
 // - Дано список імен.
+
 // let n1 = 'Harry..Potter'
 // let n2 = 'Ron---Whisley'
 // let n3 = 'Hermione__Granger'
@@ -62,14 +70,14 @@
 
 // const foo = (n1, n2, n3) => {
 //     console.log(n1, n2, n3);
-
-
+//
+//
 // }
 // foo(n1.replace(/[^a-zа-яё0-9\s]/gi, ' '))
 // foo(n2.replace(/[^a-zа-яё0-9\s]/gi, ' '))
 // foo(n3.replace(/[^a-zа-яё0-9\s]/gi, ' '))
-
-
+//
+//
 // let n1 = 'Harry Potter'
 // let n2 = 'Ron Whisley'
 // let n3 = 'Hermione Granger'
@@ -109,18 +117,18 @@
 // foo()
 
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
-function foo() {
-    let from = 1, to = 100, n = 100;
-    let result = [...Array(to - from +1).keys()].map(i => i + from)
-        .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), [])
-        .slice(0, n);
-
-    console.log(result)
-    return   result.sort()
-
-}
-
-foo()
+// function foo() {
+//     let from = 1, to = 100, n = 100;
+//     let result = [...Array(to - from +1).keys()].map(i => i + from)
+//         .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), [])
+//         .slice(0, n);
+//
+//     console.log(result)
+//     return   result.sort()
+//
+// }
+//
+// foo()
 
 
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
@@ -136,7 +144,9 @@ foo()
 // Примітка
 // Для тих, хто дуже розумний, та почне використовувати регулярні вирази одразу "ні". Своїм мозком подумайте над протоколом, з регулярками будете потім бавитись.
 //
-// - є масивlet coursesArray = [
+// - є масив
+//
+// let coursesArray = [
 //     {
 //         title: 'JavaScript Complex',
 //         monthDuration: 5,
@@ -206,13 +216,19 @@ foo()
 //     }
 // ];
 //
-//
+// console.log(coursesArray.sort());
+
 // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
 //
 // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
 //     let symb = "о", str = "Астрономия это наука о небесных объектах";
-// document.writeln(count(str, symb)) // 5
 //
+// document.writeln(count(str, symb)) // 5
+
+// const cutString = (str, n) => str.split(' ').splice(0, n).join(' ');
+// console.log(cutString(str, 5));
+
+
 // - Напишіть функцію cutString(str, n), яка видаляє зайві слова з рядка str, залишивши у ній n слів.
 //     let str = "Сила тяжести приложена к центру масс тела";
 // document.writeln(cutString(str, 5)) // 'Сила тяжести приложена к центру'
@@ -225,4 +241,29 @@ foo()
 // - знайти книжку/ки які писали 2 автори
 // - знайти книжку/ки які писав 1 автор
 // - вісортувати книжки по кількості сторінок по зростанню
+
+
+
+// 21314 --> '14124 + 300 + 50 +6'
+
+// const number = (number) => {
+//   const arr = [];
+//   let index = 0;
+//
+//   while (number) {
+//       let i = number %10 *10 ** index++;
+//       arr.unshift(i);
+//       number /=10;
+//       number = parseInt(number);
+//
+//       if (i === 0) {
+//           arr.shift();
+//
+//       }
+//   }
+//   return arr.join('+')
+//
+// }
+// let s = number(30303);
+// console.log(s);
 
