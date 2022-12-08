@@ -169,24 +169,32 @@
 // - додати цей блок в body.
 // - клонувати його повністю, та додати клон в body.
 
-let block = document.createElement('div');
-block.classList.add('wrap', 'collapse', 'alpha', 'beta');
-block.innerText = 'Hello';
-block.style.width = '400px';
-block.style.height = '400px';
-block.style.margin = '20px';
-block.style.color = 'red';
-block.style.fontSize = '32px';
-block.style.background = 'yellow';
-document.body.appendChild(block)
-
-document.body.appendChild(block.cloneNode(true))
+// let block = document.createElement('div');
+// block.classList.add('wrap', 'collapse', 'alpha', 'beta');
+// block.innerText = 'Hello';
+// block.style.width = '400px';
+// block.style.height = '400px';
+// block.style.margin = '20px';
+// block.style.color = 'red';
+// block.style.fontSize = '32px';
+// block.style.background = 'yellow';
+// document.body.appendChild(block)
+//
+// document.body.appendChild(block.cloneNode(true))
 
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
-//
+
+// let  array =  ['Main','Products','About us','Contacts']
+// let menu = document.getElementsByClassName('menu')[0];
+// for (const string of array) {
+//     let li = document.createElement('li')
+//     li.innerText = `${string}`;
+//     menu.appendChild(li)
+// }
+
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -198,7 +206,13 @@ document.body.appendChild(block.cloneNode(true))
 // ];
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
-//
+
+// for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
+//     let li = document.createElement('li')
+//     li.innerText = coursesAndDurationArrayElement.title + '  ' + coursesAndDurationArrayElement.monthDuration
+//     document.body.appendChild(li)
+// }
+
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -208,21 +222,44 @@ document.body.appendChild(block.cloneNode(true))
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-//
-//
+
+
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
+
+// for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
+//     let div = document.createElement('div');
+//     div.classList.add('item');
+//     document.body.appendChild(div);
 //
+//     let h1 = document.createElement('h1');
+//     h1.classList.add('heading');
+//     h1.innerText = coursesAndDurationArrayElement.title;
+//     div.appendChild(h1);
 //
+//     let p = document.createElement('p');
+//     p.classList.add('description');
+//     p.innerText = coursesAndDurationArrayElement.monthDuration;
+//     div.appendChild(p)
 //
+// }
+
+
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
-//
-//
+
+// function foo() {
+//     let h1 = document.querySelector('.text');
+//     h1.innerHTML = document.querySelector('.text').value = '';
+// }
+// document.querySelector('.btn').onclick = foo;
+
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
-//
+
+
+
+
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
