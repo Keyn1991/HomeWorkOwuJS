@@ -258,6 +258,23 @@
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
 
 
+let input = document.createElement('input');
+let button = document.createElement('button');
+let message = document.createElement('h1');
+button.innerText = 'Go';
+input.placeholder='Скільки тобі років?'
+
+button.addEventListener('click',function () {
+    if (input.value > 18) {
+        message.innerHTML = 'ти можеш увійти'
+
+    } else {
+        message.innerHTML = 'ти  не можеш увійти'
+    }
+});
+document.body.append(input, button, message);
+
+
 
 
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
