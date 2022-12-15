@@ -36,12 +36,12 @@
 //         photo: 'https://upload.wikimedia.org/wikipedia/ru/9/9d/Maggie_Simpson.png'
 //     },
 // ];
-
-
+//
+//
 // Проітерувати його, створиши для кожного об'єкту  масиву <div class='member'> та наповнити його данними з об'єкту.
 //
 //     Якщо людською мовою: під кожного члена родини зробити блок та наповнити його інформацією з цього об'єкту
-
+//
 //
 // let mainSection = document.getElementsByTagName('body')
 // let mainSectionNew = mainSection[0]
@@ -65,10 +65,10 @@
 //     mainSectionNew.appendChild(div);
 //
 // }
-
+//
 // Цикл в циклі
 // - Є масив
-
+//
 // let coursesArray = [
 //     {
 //         title: 'JavaScript Complex',
@@ -138,12 +138,12 @@
 //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
 //     }
 // ];
-
-
+// //
+// //
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
 // ------------------
-
+// //
 // let mainSection = document.getElementsByTagName('body')[0]
 //
 // for (const coursesArrayElement of coursesArray) {
@@ -152,23 +152,34 @@
 //     div.classList.add('skills');
 //     mainSection.appendChild(div)
 //
+//     for (const divElement of coursesArrayElement.modules) {
+//         let divTwo = document.createElement('div');
+//             divTwo.classList.add('skills-key')
+//             div.appendChild(divTwo)
+//             let titleInf = document.createElement('h4');
+//             titleInf.innerText = coursesArrayElement.modules[divElement]
+//             divTwo.appendChild(titleInf)
 //
-//     for (const divKey in coursesArrayElement) {
+//     }
+//
+//     //
+//     //
+//     for (const divKey in coursesArrayElement.modules) {
 //         let divTwo = document.createElement('div');
 //         divTwo.classList.add('skills-key')
 //         div.appendChild(divTwo)
 //         let titleInf = document.createElement('h4');
-//         titleInf.innerText = coursesArrayElement[divKey]
+//         titleInf.innerText = coursesArrayElement.modules[divKey]
 //         divTwo.appendChild(titleInf)
 //     }
-// }
-
+// // }
+// //
 //     - створити блок,
 //     - додати йому класи wrap, collapse, alpha, beta
 // - додати стилі(довільні значення) : колір фону, колір тексту, розмір тексту
 // - додати цей блок в body.
 // - клонувати його повністю, та додати клон в body.
-
+// //
 // let block = document.createElement('div');
 // block.classList.add('wrap', 'collapse', 'alpha', 'beta');
 // block.innerText = 'Hello';
@@ -181,12 +192,12 @@
 // document.body.appendChild(block)
 //
 // document.body.appendChild(block.cloneNode(true))
-
+// //
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
-
+// //
 // let  array =  ['Main','Products','About us','Contacts']
 // let menu = document.getElementsByClassName('menu')[0];
 // for (const string of array) {
@@ -194,7 +205,7 @@
 //     li.innerText = `${string}`;
 //     menu.appendChild(li)
 // }
-
+// //
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -206,13 +217,13 @@
 // ];
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
-
+// //
 // for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
 //     let li = document.createElement('li')
 //     li.innerText = coursesAndDurationArrayElement.title + '  ' + coursesAndDurationArrayElement.monthDuration
 //     document.body.appendChild(li)
 // }
-
+// //
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -222,11 +233,11 @@
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-
-
+// //
+// //
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
-
+// //
 // for (const coursesAndDurationArrayElement of coursesAndDurationArray) {
 //     let div = document.createElement('div');
 //     div.classList.add('item');
@@ -243,40 +254,77 @@
 //     div.appendChild(p)
 //
 // }
-
-
+// //
+// //
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
-
+// //
 // function foo() {
 //     let h1 = document.querySelector('.text');
 //     h1.innerHTML = document.querySelector('.text').value = '';
 // }
 // document.querySelector('.btn').onclick = foo;
-
+// //
 //     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-
-
-let input = document.createElement('input');
-let button = document.createElement('button');
-let message = document.createElement('h1');
-button.innerText = 'Go';
-input.placeholder='Скільки тобі років?'
-
-button.addEventListener('click',function () {
-    if (input.value > 18) {
-        message.innerHTML = 'ти можеш увійти'
-
-    } else {
-        message.innerHTML = 'ти  не можеш увійти'
-    }
-});
-document.body.append(input, button, message);
-
-
-
-
+// //
+// //
+// let input = document.createElement('input');
+// let button = document.createElement('button');
+// let message = document.createElement('h1');
+// button.innerText = 'Go';
+// input.placeholder='Скільки тобі років?'
+//
+// button.addEventListener('click',function () {
+//     if (input.value > 18) {
+//         message.innerHTML = 'ти можеш увійти'
+//
+//     } else {
+//         message.innerHTML = 'ти  не можеш увійти'
+//     }
+// });
+// document.body.append(input, button, message);
+//
+//
+// //
+// //
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+let inputOne = document.createElement('input');
+let inputTwo = document.createElement('input');
+let inputThree = document.createElement('input');
+
+let button = document.createElement('button');
+button.innerText = 'Click';
+
+document.body.append(inputOne, inputTwo, inputThree, button);
+
+button.onclick = () => {
+    let tr = inputOne.value;
+    let td = inputTwo.value;
+    let text = inputThree.value;
+
+    const generateTable = (raws, columns, world) => {
+      let table  = document.createElement('table');
+      table.style.border = `2px solid black`;
+      document.body.append(table);
+
+        for (let i = 0; i < raws; i++) {
+            let raw = document.createElement('tr');
+            table.append(raw)
+
+
+            for (let j = 0; j < columns; j++) {
+                let column = document.createElement('td');
+                column.innerText = `${world}`;
+                column.style.border = `2px solid black`;
+                raw.append(column);
+            }
+
+        }
+    }
+    generateTable(tr,td,text)
+}
+
