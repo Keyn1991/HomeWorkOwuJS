@@ -1,0 +1,50 @@
+body{
+    background: #084f73;
+}
+
+
+
+
+
+
+.mainDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.post-btn {
+    width: 90%;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+.aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #009982;
+    width: 75%;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 13%;
+}
+
+
+
+button {
+    margin-left: 20px;
+}
+
+.post {
+    display: flex;
+    justify-content: center;
+}
+
+.user-post {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

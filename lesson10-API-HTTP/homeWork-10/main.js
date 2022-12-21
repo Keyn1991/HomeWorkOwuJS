@@ -8,7 +8,7 @@ fetch(`http://jsonplaceholder.typicode.com/users`)
             div.classList.add('user-box');
             let h2 = document.createElement('h2');
 
-            h2.innerText = `${user.id} ${user.name}`;
+            h2.innerText = `${user.id} -- ${user.name}`;
 
             let a = document.createElement('a');
             a.innerText =`${user.id}  ${user.name} `

@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #084f73;
+}
+
+
+
+.main {
+    text-align: center;
+    border: 2px solid black;
+}
+.info {
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+}
+.main-coment {
+text-align: center;
+display: flex;
+flex-wrap: wrap;
+    border: 2px solid black;
+}
+.coment {
+    margin: 10px;
+    border: 2px solid black;
+}

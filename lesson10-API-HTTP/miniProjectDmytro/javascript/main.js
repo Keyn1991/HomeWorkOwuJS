@@ -1,45 +1,7 @@
 // В index.html
 // 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
 // 2 Вивести id,name всіх user в index.html. Окремий блок для кожного user.
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then(users => {
-        for (const user of users) {
-           let div = document.createElement('div');
-           div.classList.add('user-box');
-            let h2 = document.createElement('h2');
-            h2.innerText = `${user.id} ${user.name}`;
-
-            let a = document.createElement('a');
-            a.innerText =`${user.id} ${user.name}`
-            a.href = 'user-details.html?data={JSON.stringify(user)}'
-
-            h2.appendChild(a)
-            div.appendChild(h2)
-            document.body.appendChild(div)
-
-
-            let postBtn = document.createElement('button');
-            postBtn.classList.add('firstPageButton');
-            postBtn.id = `${user.id}`;
-            postBtn.innerText = 'Details';
-
-            postBtn.onclick = () => {
-                location.href = `user-details.html?id=${user.id}`;
-            }
-
-            div.appendChild(postBtn);
-
-
-
-
-
-
-        }
-    })
 // 3 Додати кожному блоку кнопку/посилання , при кліку на яку відбувається перехід  на сторінку user-details.html, котра має детальну інфорацію про об'єкт на який клікнули
-//
-//
 // На странице user-details.html:
 // 4 Вивести всю, без виключення, інформацію про об'єкт user на який клікнули
 // 5 Додати кнопку "post of current user", при кліку на яку, з'являються title всіх постів поточного юзера
@@ -49,7 +11,53 @@ fetch('https://jsonplaceholder.typicode.com/users')
 //     На странице post-details.html:
 // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
 // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
-//
+
+
+const mainDiv = document.createElement('div');
+mainDiv.classList.add('mainDiv')
+document.body.appendChild(mainDiv)
+
+
+fetch(`http://jsonplaceholder.typicode.com/users`)
+    .then(response => response.json())
+    .then(users => {
+        for (const user of users) {
+
+            const div = document.createElement('div');
+            div.classList.add('user-box');
+            const h2 = document.createElement('h2');
+
+            h2.innerText = `${user.id} - ${user.name}`;
+
+            const a = document.createElement('a');
+            a.innerText =` - ${user.name} `
+            a.href = 'user-details.html?id=' + user.id;
+
+            h2.appendChild(a)
+            div.appendChild(h2)
+            mainDiv.appendChild(div)
+
+
+
+            const oneButton = document.createElement('button');
+            oneButton.classList.add('firstButton');
+            oneButton.id = `${user.id}`;
+            oneButton.innerText = 'Details';
+
+            oneButton.onclick = () => {
+                location.href = `user-details.html?id=${user.id}`;
+            }
+
+            div.appendChild(oneButton);
+
+        }
+
+    })
+
+
+
+
+
 // Стилизація проєкта -
 // index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.
 //     user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.
