@@ -47,4 +47,6 @@ button {
 .user-post {
     margin-top: 10px;
     margin-bottom: 10px;
+    border: 2px solid black;
+    margin: 5px;
 }
