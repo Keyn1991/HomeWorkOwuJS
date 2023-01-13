@@ -1,0 +1,27 @@
+.header {
+    text-align: center;
+
+}
+p {
+    height: 300px;
+    background: yellow;
+    text-align: center;
+   justify-items: center;
+    font-size: 36px;
+}
+
+.b-1 {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+}
+
+
+.b-1:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+}

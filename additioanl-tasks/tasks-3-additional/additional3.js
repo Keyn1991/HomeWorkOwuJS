@@ -209,9 +209,17 @@ let str = '';
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
 
-for (const string of arr) {
-    str += string;
+// for (const string of arr) {
+//     str += string;
+// }
+// console.log(str);
 
+
+let i = 0;
+do {
+    i++;
 }
+while (i < 5) {
 
-console.log(str);
+    console.log(i);
+}

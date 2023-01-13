@@ -1,26 +1,117 @@
 // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
 // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+
+// function cutString(str,n) {
+//     let string = []
+//     for (let i = 0; i < str.length; i = i+n) {
+//        string.push(str.substr(i, n))
+//     }
+//     return string;
+// }
+// console.log(cutString('наслаждение', 3));
+// document.writeln(cutString('наслаждение',3));
+
 // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
 //     let str = 'Каждый охотник желает знать';
 // document.writeln(delete_characters(str, 7)); // Каждый
+
+
+
+//   let string = 'Каждый охотник желает знать';
 //
+// function delete_characters(str, length) {
+//     console.log(string.substring(0, length));
+//
+// }
+//
+// delete_characters(string, 6)
+
+
 // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
 //     let str = "HTML JavaScript PHP";
 // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
 //
-// - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+
+// let str = "HTML JavaScript PHP";
+// function insert_dash(str) {
+//     let string = str.split(' ');
+//     str.slice(0, -1);
 //
+//     for (const a of string) {
+//         document.write(a.concat('-').toUpperCase())
+//     }
+//
+// }
+//
+// insert_dash(str)
+
+
+
+// - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+//// let string = 'хочу вивчити JavaScript'
+
+// let string = 'хочу вивчити JavaScript'
+// function upCase(str) {
+//     console.log(str.replace(str[0], str[0].toUpperCase()));
+// }
+//
+// upCase(string)
+
 // - Дано список імен.
-//     let n1 = 'Harry..Potter'
+// let n1 = 'Harry..Potter'
 // let n2 = 'Ron---Whisley'
 // let n3 = 'Hermione__Granger'
-// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
-// let n1 = 'Harry Potter'
-// let n2 = 'Ron Whisley'
-// let n3 = 'Hermione Granger'
 //
+
+
+
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+
+// const foo = (n1, n2, n3) => {
+//     console.log(n1, n2, n3);
+//
+//
+// }
+// foo(n1.replace(/[^a-zа-яё0-9\s]/gi, ' '))
+// foo(n2.replace(/[^a-zа-яё0-9\s]/gi, ' '))
+// foo(n3.replace(/[^a-zа-яё0-9\s]/gi, ' '))
+
 //     - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+let random_start = 1;
+let random_end = 100;
+let allСycles = 100;
+
+let arr= []
+
+for( i = random_start; i <= random_end;i++) {
+    arr.push(i)
+}
+
+for( countCycles = 1; countCycles <= allСycles; countCycles++){
+    console.log(arr.splice(Math.random()*arr.length,1)[0])
+}
+//
+function foo() {
+    let from = 1, to = 100, n = 100;
+    let result = [...Array(to - from +1).keys()].map(i => i + from)
+        .reduce((arr, elt) => (arr.splice(Math.random() * (arr.length + 1), 0, elt), arr), [])
+        .slice(0, n);
+
+    console.log(result)
+
+}
+foo()
+
+
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+
+function foo2() {
+
+    foo()
+
+}
+foo2()
 // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
 //
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
